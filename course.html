@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Course Details</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #4b1248;
+      color: white;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    nav h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .video-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      color: #4b1248;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 12px;
+      max-width: 100%;
+    }
+
+    .progress {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .progress label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #e0e0e0;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #4b1248, #f0c27b);
+      width: 0%;
+      border-radius: 20px 0 0 20px;
+      transition: width 0.5s ease-in-out;
+    }
+
+    .progress p {
+      font-size: 0.95rem;
+      color: #4b1248;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>E-Learn</h1>
+      <ul>
+        <li><a href="avanthi.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="video-section">
+    <h2 id="courseTitle">Course Title</h2>
+    <iframe id="courseVideo" width="100%" height="400" src="" allowfullscreen></iframe>
+
+    <div class="progress">
+      <label>Progress:</label>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p id="progressText">0% completed</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 E-Learn Platform. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const courses = {
+      html: {
+        title: "HTML & CSS Full Course",
+        video: "https://www.youtube.com/embed/mU6anWqZJcc",
+        progress: 60
+      },
+      js: {
+        title: "JavaScript Crash Course",
+        video: "https://www.youtube.com/embed/hdI2bqOjy3c",
+        progress: 40
+      },
+      python: {
+        title: "Python Full Course",
+        video: "https://www.youtube.com/embed/_uQrJ0TkZlc",
+        progress: 30
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const courseKey = params.get("course");
+
+    const courseData = courses[courseKey];
+
+    if (courseData) {
+      document.getElementById("courseTitle").textContent = courseData.title;
+      document.getElementById("courseVideo").src = courseData.video;
+      document.getElementById("progressFill").style.width = courseData.progress + "%";
+      document.getElementById("progressText").textContent = `${courseData.progress}% completed`;
+    } else {
+      document.getElementById("courseTitle").textContent = "Course Not Found";
+      document.getElementById("progressText").textContent = "Please select a valid course.";
+    }
+  </script>
+</body>
+</html>

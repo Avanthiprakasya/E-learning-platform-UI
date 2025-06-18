@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>E-Learning Platform</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #4b1248;
+      color: white;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    nav h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      padding: 5px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #f0c27b;
+      transform: scale(1.1);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #f0c27b, #4b1248);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: white;
+      color: #4b1248;
+      padding: 10px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    section h3 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #4b1248;
+    }
+
+    .feature-list {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .feature {
+      flex: 1 1 250px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .course {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .newsletter form {
+      text-align: center;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      background: #4b1248;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .about, .contact {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-top: 40px;
+    }
+
+    .contact p {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>E-Learn</h1>
+      <ul>
+        <li><a href="avanthi.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to E-Learn</h2>
+    <p>Enhance your skills with our expertly designed courses!</p>
+    <a href="courses.html" class="btn">Explore Courses</a>
+  </section>
+
+  <section class="features">
+    <h3>Why Choose Us?</h3>
+    <div class="feature-list">
+      <div class="feature">
+        <h4>Expert Mentors</h4>
+        <p>Learn from industry professionals with real-world experience.</p>
+      </div>
+      <div class="feature">
+        <h4>Flexible Learning</h4>
+        <p>Access courses anytime, anywhere with lifetime access.</p>
+      </div>
+      <div class="feature">
+        <h4>Certificates</h4>
+        <p>Get certified and boost your career with recognized credentials.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses">
+    <h3>Popular Courses</h3>
+    <div class="course-list">
+      <div class="course">
+        <h4>Full-Stack Web Development</h4>
+        <p>HTML, CSS, JS, React, Node & more. Build real projects!</p>
+      </div>
+      <div class="course">
+        <h4>UI/UX Design</h4>
+        <p>Master design thinking, Figma, prototyping & responsive design.</p>
+      </div>
+      <div class="course">
+        <h4>Python for Beginners</h4>
+        <p>Start coding with Python and build your first automation scripts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h3>About Us</h3>
+    <p>E-Learn is a modern online education platform designed to empower students and professionals to upskill in technology, design, and development. Our mission is to make quality education accessible and flexible for learners everywhere. Whether you're just starting or looking to sharpen your skills, our curated courses and real-world projects help you succeed.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h3>Contact Us</h3>
+    <p><strong>Email:</strong> vavk@elearnplatform.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <p><strong>Address:</strong> E-Learn Headquarters, 3rd Floor, Tech Park, Bengaluru, India</p>
+  </section>
+
+  <section class="newsletter">
+    <h3>Stay Updated!</h3>
+    <form>
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 E-Learn Platform. All rights reserved.</p>
+  </footer>
+</body>
+</html>

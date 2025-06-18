@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Courses</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #4b1248;
+      color: white;
+      padding: 20px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    nav h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .courses {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .courses h2 {
+      text-align: center;
+      color: #4b1248;
+      margin-bottom: 30px;
+    }
+
+    .course-list {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card h3 {
+      color: #4b1248;
+    }
+
+    .course-card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4b1248;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #6a1b6a;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>E-Learn</h1>
+      <ul>
+        <li><a href="avanthi.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="courses">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <div class="course-card">
+        <h3>HTML & CSS</h3>
+        <p>Learn the structure and style of modern web pages using HTML and CSS.</p>
+        <a href="course.html?course=html" class="btn">Start Learning</a>
+      </div>
+      <div class="course-card">
+        <h3>JavaScript Essentials</h3>
+        <p>Master the fundamentals of programming with JavaScript for web development.</p>
+        <a href="course.html?course=js" class="btn">Start Learning</a>
+      </div>
+      <div class="course-card">
+        <h3>Python Programming</h3>
+        <p>Dive into Python and build skills for data science, automation, and web apps.</p>
+        <a href="course.html?course=python" class="btn">Start Learning</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 E-Learn Platform. All rights reserved.</p>
+  </footer>
+</body>
+</html>
